@@ -1,37 +1,52 @@
 PYTHON
 
+Build functions to refine user inputs for easy calculations
+
+  stiches_inch
+      st_gauge = float(int(raw_gauge_stitches) / 4)  #gauge will always be str -> int, converting to float for accuracy
+      
+  rows_inch
+      r_gauge = float(int(raw_gauge_rows) / 4)   #gauge will always be str -> int, converting to float for accuracy
+      
+  torso_length
+      trs_length = float(raw_torso_length)  #string to float for calculations
+      
+  torso_width
+      trs_width = float(raw_torso_width) #string to float for calculations
+      
+  sleeve_length
+      sl_length = float(raw_sleeve_length)  #string to float for calculations
+      
+  sleeve_width
+      trs_width = float(raw_torso_width) * 0.??? #calulate ratio from torso#   #string to float for calculations
+
+
 Build functions to calculate each pattern part
   
-  body:
-    cast on
-    length
-    shape armhole
-    shape neckline
-    cast off
-  
+  torso:
+    trs_cast_on
+    trs_shape_armhole
   sleeve:
-    cast on
+    sl_cast_on
     length
-    taper
-    shape armhole
-    cast off
+    taper??
+    sl_shape_armhole
   
-  assembly:
-    generic text instructions - same for all sweater outputs
+  neckline:
+    join sleeves to torso
+    nk_decrease 
+        until neckline width
+    nk_castoff
 
-Build functions to ask for user parameters
 
-  instructions:
+
+
+
+
+Instructions:
     generic text instructions/intro
   
-  ask for input:
-    gauge (desired stitches per inch)
-      horizontal
-      vertical
-    body width
-    body length
-    sleeve length
-    
+   
 Output
 
   pull all input and calculations into one user-frinedly, complete text output
