@@ -6,6 +6,8 @@
 
 ######variable formatting/verifying functions
 
+#max/mins, 
+
 
 ######knitting functions
 ####TORSO
@@ -80,18 +82,48 @@ def neck_start():		#no calculations here. tricky just getting everything lined u
 	print "Insert the last of your 3 markers.\n"
 	print "Bring your second sleeve, line up the armohole openings again, and knit around the armhole to the end.\n"
 	print "We're back at the begining, now in one continuous loop!\n"
-	print "Insert yur 4th marker - unique color - to mark the row start.\n"
+	print "Insert your 4th marker - unique color - to mark the row start.\n"
 	print "Knitting this first row was probably very awkward, with your needles forced to turn around some pretty sharp curves.\n"
 	print "The next few rows will continue to be awkward, but with each row it will level out into an easier round shape, so hang in there.\n"
 
 
-def neck_finish(trs_stitches_oneside, sl_stitiches, gauge_st, gauge_r):
+def neck_finish(trs_stitches_oneside, sl_stitches, gauge_st, gauge_r):
 	buffer_stitches = int(trs_stitches * 0.1) #???? calculate - definitely need max (10?) min(2)
-	final_stitch_count = int((trs_stitches + slv_stitches) * 2 * 0.3) ## .3?  calculate ratio, max/min.  front, back, 2 sleeves, then reduced to proportion.	
+	total_stitches = 2 * (trs_stitches_oneside + sl)
+	final_stitch_count = int((trs_stitches + slv_stitches) * 2 * 0.3) ## .3?  calculate ratio, max/min.  front, back, 2 sleeves, then reduced to proportion.
+	row_count = 2 	#first row, just working around once.  Second row is our first round of decreases.
 
-	print "Now, for the remainder of the work, you will be methodically decreacing stitches, so the body will taper off to a neckline.\n"
-	print "You will need to pay attention to stitch and row count goign forward.\n"
-	print "Starting at the beginning of the row (your unique marker), knit " + buffer_stitches + " "
+
+	print "Now, for the remainder of the work, you will be methodically decreasing stitches, so the body will taper off to a neckline.\n"
+	print "You will need to pay attention to stitch and row count going forward.\n"
+	print "Starting at the beginning of the row (your unique marker), knit " + buffer_stitches + "."
+	print "Knit 2 stitches together (decrease by one.)"
+	print "Continue knitting until " + (buffer_stitches + 2) + " before next marker.\n"
+	print "Knit 2 together, knit " + buffer_stitches + ", pass the marker, knit " + buffer_stitches + ", and knit 2 together."
+	print "Continue all the way around the row, decreasing once before, and once after, each marker, until you are back to the start."
+	total_stitches -= 8
+	print "In plain English, you will be decreasing 8 stitches a row in this manner, every ??? rows.\n"
+	print "But the below chart will help you track exactly how many stitches and rows you should have at every point.\n"
+	print "N.B. this pattern will calculate a basic neckline, but you can easily stop sooner, or continue past"
+	print "to create an open/off-the shoulder look, or funnel/turtleneck. Do what feels right!\n\n\n"
+	print "Row count = " + row_count + ", Stitch count = " + (total_stitches)
+
+	while total_stitches > final_stitch_count:
+		print "Knit the next ???? rows as presented, without decreases."
+		row_count += ???		#only execute decrease every ??? rows (not variable - slope is same no matter size).
+		print "At row " + row_count + ", decrease as above - once before, and once after each marker."
+		total_stitches -= 8		#decreasing once before, once after each of the 4 markers.
+		print "Row count = " + row_count + ", Stitch count = " + (total_stitches)
+
+	print "Now you should be at row " + row_count + " with " + total_stitches + ".\n"
+	print "Cast off all stitches.\n\n\n"
+
+	print "YOU JUST MADE A SWEATER!!!!!!!!!!!"
+	print "Do your happy dance first, and then take a moment to sew closed the small armhole openings under each sleeve.\n"
+	print "Block, iron, wash - whatever you did before to your swtch to achieve your gauge.\n"
+	print "Rock your sweater for the whole world to see, and send pics to: ninja@knitgit.com"
+
+
 
 
 
@@ -106,11 +138,13 @@ def main():
 
 	torso_start(trs_width, gauge_st, trs_length, gauge_r)
 
+#	variable_name?? = fun_call(parameters)!!!!!!!!! to go from one fun to the next, and carry over new data.
+
 	sleeve_start(trs_width, gauge_st, slv_length, gauge_r)
 
 	neck_start()
 
-	neck_finish()
+	neck_finish(parammmm)
 
 if __name__ == '__main__':
 	main()
