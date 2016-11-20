@@ -1,0 +1,52 @@
+#divRegistered{
+	height: 100px;
+	width: 600px;
+	background-color: blue;
+	color: black;
+	font-size: 20px;
+	display: none;
+}
+
+#robotLion{
+	display: none;
+}
+
+tr{
+	height: 40px;
+}
+
+
+.containter {
+	background-color: #222;
+	color: #fff;
+	margin: 20px auto;
+	overflow: hidden;
+	padding: 20px;
+	position: relative;
+	width: 600px;
+}
+
+form {
+	display: block;
+	padding: 15px;
+	color: aqua;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+h2{
+	color: red;
+	font-family: Arial; 
+}
+
+
+
+.good {
+    	background-color: green;
+	color: white;
+}
+
+.badboy {
+    	background-color: red;
+	color: white;
+}
