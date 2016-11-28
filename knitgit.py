@@ -1,4 +1,8 @@
-#code actual!!!!
+########################
+#DO NOT USE#
+########################
+
+#SPLIT THIS UP INTO UI AND FUNCTIONS#
 
 
 #github: tremlab
