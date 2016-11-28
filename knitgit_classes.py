@@ -23,7 +23,7 @@ class Sweater(object):
 		#slv_armhole is just trs_armhole -- must be equal
 
 		self.buffer_stitches = int(self.trs_stitches * 0.1) #???? calculate - definitely need max (10?) min(2)	
-		self.total_stitches = int(self.trs_stitches + (2 *self.slv_stitches) - (4 * trs_armhole))									
+		self.total_stitches = int(self.trs_stitches + (2 *self.slv_stitches) - (4 * self.trs_armhole))									
 		self.final_stitch_count = int((self.trs_stitches + self.slv_stitches) * 2 * 0.3) ## .3?  calculate ratio, max/min.  front, back, 2 sleeves, then reduced to proportion.
 
 # first_sweater = Sweater(20, 22, 20.5, 38, 12)
