@@ -3,6 +3,7 @@
 
 var divReg;
 var divMain;
+var divGauge
 var inputElements;
 var spanElements;
 
@@ -80,30 +81,6 @@ function fCompareInput(value1, value2, display)		//arguments OK?
 	
 	};
 
-	function fRobotLion() 
-	{
-	//var RL = document.getElementById("robotLion");
-	//RL.innerHTML = "<img src = 'voltron.jpg'>";
-	//alert("robots?"); testing - this works...why not fadein?????
-	//commenting out for now :(  $("#robotLion").fadeIn(4000);	//testing why is fade in to working??? works up top, but not here. but I know the button trigger works...?
-	};
-		
-/*	this was goign to be a goofy test for whether or not there is a robot in your passowrd, and a different animation depending on the result.
-	{
-	var liroRegExp = new RegExp (robot|lion); 	//syntax?
-	var pword = inputElements[1].value;
-	var s = document.getElementById("robotLion");	//helps if you save the HTML changes!
 
-	if (liroRegExp.test(pword))	//syntax?
-		{
-		s.innerHTML = "<img src = 'voltron.jpg'>";
-		}
-	else
-		{	
-		alert ("Your password doesn't contain any lions or robots. Sad!");
-		s.innerHTML = "<img src = 'sadrobot.jpg'>";
-		}
-	};
-*/
 
 			
