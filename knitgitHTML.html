@@ -8,7 +8,7 @@
 
 <body background = "wallpaper.jpg">
 	<h1>knitgit by tremlab</h1>
-	<div class="container" id="divRegistered">sdhfkjsdhfkj</div>  
+	<div class="container" id="divRegistered">sdhfkjsdhfkj</div>  <!-- display confirmation after submitted -->
 
 	<div class="containter" id="divMain">
 		<h2>the roundabout  </h2>
@@ -28,23 +28,70 @@
 	</div>
 
 	<div class="container" id="divGauge">
-		<form action="knitgitHTML.html" method="get" name="fromRegister" id ="frmRegister" >
-			<img src="knitting-gauge-measuring-swatch.jpg">
-			<table>
-				<tr>
-					<td>Gauge - stitches:</td>
-					<td><input type="text" name="Gauge - stitiches:" id="raw_gauge_st" />&nbsp;<span id="spnGaugeSt"></span></td>
-				</tr>
-				<tr>
-					<td>Gauge - rows:</td>
-					<td><input type="test" id="raw_gauge_r" />&nbsp;<span id="spnGaugeR"></span></td>
-				</tr>
-				<tr>
-					<td colspan="2"><input type="submit" id="btnSubmit" value="Submit"></td>
-				</tr>
-			</table>
-		</form>
-	</div>
 
+			<img src="knitting-gauge-measuring-swatch.jpg">
+			gauge info blah blah
+	</div>
+<h3>
+	<div class="container" id="divForm">
+		<form 
+			action="knitgitHTML.html" 
+			method="get" 
+			name="formRegister" 
+			id ="frmRegister" >
+
+			<label>Gauge - stitches:
+				<input 
+					type="text" 
+					name="raw_gauge_st" 
+					id="raw_gauge_st" 
+					/>&nbsp;<span id="spnGaugeSt"></span>
+			</label>
+			<br>
+			<label>Gauge - rows:
+				<input 
+					type="text" 
+					name="raw_gauge_r" 
+					id="raw_gauge_r" 
+					/>&nbsp;<span id="spnGaugeR"></span>
+			</label>
+			<br>
+			<label>Torso - length:
+				<input 
+					type="text" 
+					name="raw_trs_length" 
+					id="raw_trs_length" 
+					/>&nbsp;
+					<span id="spnTorsoLen"></span>
+			</label>
+			<br>
+			<label>Torso - width:
+				<input 
+					type="text" 
+					name="raw_trs_width" 
+					id="raw_trs_width" 
+					/>&nbsp;
+					<span id="spnTorsoWid"></span>
+			</label>
+			<br>
+			<label>Sleeve - length:
+				<input 
+					type="text" 
+					name="raw_slv_length" 
+					id="raw_slv_length" 
+					/>&nbsp;
+					<span id="spnSleeveLen"></span>
+			</label>
+			<br>
+			<label>
+				<input 
+					type="submit" 
+					name="btnSubmit"
+					id="btnSubmit" 
+					value="Submit">
+			</label>
+		</form>
+</h3>
+	</div>
 </body>
 </html>

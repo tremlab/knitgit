@@ -8,17 +8,16 @@ def ask_user_input(param_list):				#loops through parameter list and asks user t
 
 	for param in param_list:		#asking user for their measurements
 		user_input = raw_input("Please enter the " + param[1])
+		#basic validation for positive number (int/float) only?
 		sweater_attributes[param[0]] = user_input		#tested, working	
 
 	return sweater_attributes #tested - works.
 
+
 def ask_user_correction(input_dict, key):
 	input_dict[key] = raw_input("Please enter the corrected value (numbers only!):\n") #set new value
-	for i in input_dict:		#jsut testing - need to see data
-		print i, input_dict[i]
-
 	corrected_dict = validate_user_input(input_dict) #and test again until there are no errors.
-	return corrected_dict  #GAH!!! I think thefinal dict is not reutrunung to the maini function D:
+	return corrected_dict  
 
 	
 
@@ -41,9 +40,9 @@ def validate_user_input(input_dict):		#logic works, but research actual values f
 	elif float(input_dict["raw_trs_width"]) > 100: 
 		print "Your torso circumference is too big for this pattern. :("
 		input_dict = ask_user_correction(input_dict, "raw_trs_width") 
-	# sleevee & torso lenght -- less urgent, but should set max.
+	# sleevee & torso length -- less urgent, but should set max.
 	
-	return input_dict   #hooo boy -- not an else statement! wasn't gettin gany return. :) 
+	return input_dict   #hooo boy -- not an else statement! wasn't getting any return. :) 
 
 def main():
 	print """
@@ -68,7 +67,7 @@ vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 
 I just need a few measurements to get started.  Please enter numbers only!
 	"""
-
+	# break this out to a module?
 	sweater_parameters = [		#setting this up for looping, so I can use this code for future sweaters with different parameters.
 					["raw_gauge_st", "stitches to achieve 4 inches across (whole number!):\n"], 
 					["raw_gauge_r", "rows to achieve 4 inches up (whole number!):\n"], 
@@ -81,8 +80,7 @@ I just need a few measurements to get started.  Please enter numbers only!
 
 
 	sweater_attributes = validate_user_input(raw_user_input_dict) 		#validate all data before executing further code.
-	print sweater_attributes["raw_gauge_st"]
-###validate input!!!!!!!!!!!!!!!!!!
+
 
 	this_sweater = Sweater(int(sweater_attributes["raw_gauge_st"]), 	#easier to typacast BEFORE handing over to object.  huzzah!
 						int(sweater_attributes["raw_gauge_r"]), 
@@ -90,13 +88,19 @@ I just need a few measurements to get started.  Please enter numbers only!
 						float(sweater_attributes["raw_trs_width"]), 
 						float(sweater_attributes["raw_slv_length"]))	#it works!!!!!!!!  :D
 
-	knitgit_functions.torso_start(this_sweater)		
+	TORSO_START = knitgit_functions.torso_start(this_sweater)		
 
-	knitgit_functions.sleeve_start(this_sweater)		
+	SLEEVE_START = knitgit_functions.sleeve_start(this_sweater)		
 
-	knitgit_functions.neck_start()
+	NECK_START = knitgit_functions.neck_start() #no parameters here, same instructions for all sweaters.
 
-#	knigit_functions.neck_finish(this sweater)
+#	NECK_FINISH = knigit_functions.neck_finish(this sweater)
+
+#	this output needs to WRITE to txt or pdf!!!!!!!
+	print TORSO_START
+	print SLEEVE_START
+	print NECK_START
+	# print NECK_FINISH
 
 if __name__ == '__main__':
 	main()

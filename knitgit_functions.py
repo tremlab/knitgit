@@ -4,72 +4,107 @@
 #Hackbright Intro 2016
  
 
-
-####TORSO
-
-# from knitgit_classes import Sweater
-
 def torso_start(this_sweater):		
-	#limits - max/min size?
+
 	#is zero?
 
- 
-	print "\n\n\n\nBottoms up! Let's start building the torso.\n\n"
-	print "Using the needles and yarn that you chose to achieve your gauge, cast on " + str(this_sweater.trs_stitches) + " stitches.\n"
-	print """
-REMINDER:  this pattern is in the round!
+ 	return """
+******************* 
+*** TORSO START ***
+*******************
+
+Bottoms up! Let's start building the torso.
+
+
+Using the needles and yarn that you chose to achieve your gauge, cast on %i stitches.
+
+---REMINDER:  this pattern is in the round!
+
 Loop around from your last cast on, back to your first.
 Make sure to use a marker to keep track of where your row starts.
 Start working in the pattern stitch you used to achieve your gauge.
-SAVOR THIS MOMENT!!! IT'S GONNA BE ***GORGEOUS!!!***\n
-	"""
 
-	print "Continue working in your chosen stitch until work measures " + str(this_sweater.raw_trs_length) + " inches." #1 decimal???
-	print "(Should be about " + str(this_sweater.trs_rows) + " rows, but do whatever feels right!)\n"
-	print "Continue in your pattern stitch for " + str(this_sweater.trs_half) + " stitches.\n"
-	print "We're halfway!! Cast off " + str(this_sweater.trs_armhole) + " stitches.\n"
-	print "Continue the row in your pattern stitch for " + str(this_sweater.trs_half) + " stitches.\n"
-	print "Again, cast off " + str(this_sweater.trs_armhole) + " stitches. Don't lose your marker! ;)"
-	print "It may not look like much, but you just finished the biggest piece of this sweater!  You **so** got this!!\n"
-	print "See? I TOLD you it would be gorgeous!! :*\n\n\n"
-	#return stiches???????????
+---SAVOR THIS MOMENT!!! IT'S GONNA BE ***GORGEOUS!!!***
+
+Continue working in your chosen stitch until work measures %f.1 inches. 
+(Should be about %i rows, but do whatever feels right!)
+
+Continue in your pattern stitch for %i stitches.
+We're halfway!! Cast off %i stitches.
+Continue the row in your pattern stitch for %i stitches.
+Again, cast off %i stitches. Don't lose your marker! ;)
+
+---It may not look like much, but you just finished the biggest piece of this sweater!  
+---You **so** got this!!
+""" % (	this_sweater.trs_stitches,
+		this_sweater.raw_trs_length, #still need to figure out decimal display :(
+		this_sweater.trs_rows,
+		this_sweater.trs_half,
+		this_sweater.trs_armhole,
+		this_sweater.trs_half,
+		this_sweater.trs_armhole
+		)
 
 ####SLEEVES
 
-def sleeve_start(this_sweater):				#all inputs floats
-	#limits - max/min size?
-	#is zero?
+def sleeve_start(this_sweater):				
 
-	print "But, let's not rest on our laurels just yet. ;)"
-	print "Set aside your (beautiful!) torso work, and lets get started on a sleeve.\n"
-	print "Using the needles and yarn that you chose to achieve your gauge, cast on " + str(this_sweater.slv_stitches) + " stitches.\n"
-	print "REMINDER: we're STILL working in the round. This is where you'll need a ninja star of double-pointed needles to work.\n"
-	print "(REMINDER: you're totally a ninja!!)\n"
-	print "Loop around from your last cast on, back to your first.\n"
-	print "Make sure to use a marker to keep track of where your row starts.\n"
-	print "Start working in the pattern stitch you used to achieve your gauge.\n"
-	print "This is gonna go soooo much faster than the body! Rock your dance playlist.\n"
-	print "Continue working in your chosen stitch until work measures %f(1) inches\n" % (this_sweater.raw_slv_length) #SYNTAX!!!!! 1 decimal! 2?
-	print "(Should be about " + str(this_sweater.slv_rows) + " rows, but do whatever feels right!)"
-	print "Continue in your pattern stitch until you reach the last " + str(this_sweater.trs_armhole) + " stitches.\n"	
-	print "Cast off till the end of the row.\n"			
-	print "Now you have the body *AND* a sleeve. Time for chocolate. or zinfandel... or bourbon.\n\n\n"
-	print "But... we do need 2 sleeves. so repeat it all again, and make sure the lengths match each other exactly."
+	#is zero?
+	return """
+******************** 
+*** SLEEVE START ***
+********************
+
+---But, let's not rest on our laurels just yet. ;)
+
+Set aside your (beautiful!) torso work, and lets get started on a sleeve.
+
+Using the needles and yarn that you chose to achieve your gauge, cast on %i stitches.
+
+---REMINDER: we're STILL working in the round. 
+---This is where you'll need a ninja star of double-pointed needles to work.
+---(REMINDER: you're totally a ninja!!)
+
+Loop around from your last cast on, back to your first.
+
+Make sure to use a marker to keep track of where your row starts.
+
+Start working in the pattern stitch you used to achieve your gauge.
+
+---This is gonna go soooo much faster than the body! Rock your dance playlist.
+
+Continue working in your chosen stitch until work measures %f.1 inches.
+(Should be about %i rows, but do whatever feels right!)
+
+Continue in your pattern stitch until you reach the last %i stitches.
+
+Cast off till the end of the row.
+
+---Now you have the body *AND* a sleeve.
+---Time for chocolate. or zinfandel... or bourbon.
+
+But... we do need 2 sleeves. so repeat it all again, and make sure the lengths match each other exactly."
+""" % (	this_sweater.slv_stitches,
+		this_sweater.raw_slv_length,
+		this_sweater.slv_rows,
+		this_sweater.trs_armhole
+	)
 
 # ####NECK
 
 def neck_start():		#no calculations here. tricky just getting everything lined up.
 
-	print """
+	return """
 
 
-The good news: you've finished more than half or your knitting! Go you!!
-The bad news: now it gets complicated...
+---The good news: you've finished more than half or your knitting! Go you!!
+---The bad news: now it gets complicated...
 
-The pattern so far has been pretty straightforward and chill, but now you have to start paying attention.
+---The pattern so far has been pretty straightforward and chill, but now you have to start paying attention.
 
 First, let's assemble all of our pieces into one big sweater-loop.
-(REMINDER: you are Voltron!)
+
+---(REMINDER: you are Voltron!)
 
 
 
@@ -77,26 +112,29 @@ First, let's assemble all of our pieces into one big sweater-loop.
 You will need 3 markers, all the same color, and 1 in a distinct color to mark the absolute row beginning.
 Knit in your pattern stitch across the front of your torso, up to where you cast off for the first armhole.
 
----> Insert the first of your 3 markers.
+-> Insert the first of your 3 markers.
 
 Now bring your first sleeve, and line up the opening for the armhole, with the opening on the torso.
 Continue to knit across from the torso directly onto the sleeve.
 Knit all the way around the sleeve, and then...
 
----> Insert the second of your 3 markers.
+-> Insert the second of your 3 markers.
 
 Now continue to the back of your torso, knit all the way across to where you cast off for the seocnd armhole.
 
----> Insert the last of your 3 markers.
+-> Insert the last of your 3 markers.
 
 Bring your second sleeve, line up the armohole openings again, and knit around the armhole to the end.
 We're back at the begining, now in one continuous loop!
 
----> Insert your 4th marker - unique color - to mark the row start.
+-> Insert your 4th marker - unique color - to mark the row start.
 
-Knitting this first row was probably very awkward, with your needles forced to turn around some pretty sharp curves.
-The next few rows will continue to be awkward, but with each row it will level out into an easier round shape, so hang in there.
-	"""
+---Knitting this first row was probably very awkward, 
+---with your needles forced to turn around some pretty sharp curves.
+---The next few rows will continue to be awkward, 
+---but with each row it will level out into an easier round shape, 
+---so hang in there!!
+"""
 
 # def neck_finish(this_sweater):  #debug, test!!!!!! draft only
 
