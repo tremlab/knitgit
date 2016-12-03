@@ -2,6 +2,40 @@
 
 #github: tremlab
 #Hackbright Intro 2016
+
+def print_intro():
+	return """
+
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+ v v v v v v v v v v v v v v v v v v v v v v v v v v v v
+    vv     vv     o    vv     vv     o    vv     vv
+    vvv   vvv          vvv   vvv          vvv   vvv
+vvv vvvv vvvv vvv  vvv vvvv vvvv vvv  vvv vvvv vvvv vvv
+ vvv vvv vvv vvv    vvv vvv vvv vvv    vvv vvv vvv vvv
+  vvv vv vv vvv      vvv vv vv vvv      vvv vv vv vvv
+        o                  o                  o
+  vvv vv vv vvv      vvv vv vv vvv      vvv vv vv vvv  
+ vvv vvv vvv vvv    vvv vvv vvv vvv    vvv vvv vvv vvv
+vvv vvvv vvvv vvv  vvv vvvv vvvv vvv  vvv vvvv vvvv vvv
+    vvv   vvv          vvv   vvv          vvv   vvv
+    vv     vv    o     vv     vv     o    vv     vv 
+ v v v v v v v v v v v v v v v v v v v v v v v v v v v v
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+   
+                    GIT YOUR KNIT ON
+
+                   knitgit by tremlab
+                     THE ROUNDABOUT
+
+This app lets you use any stitch, yarn, and needle you'd like, 
+to create a pattern for a straight-cut, scoopneck, raglan sleeve sweater
+in whatever size you choose.
+
+Make sure you are using a 'homogenous' stitch for the entire sweater
+that can be tiled off of your 4" x 4" gauge swatch.
+
+I just need a few measurements to get started.  Please enter numbers only!
+	"""
  
 
 def torso_start(this_sweater):		
@@ -26,7 +60,7 @@ Start working in the pattern stitch you used to achieve your gauge.
 
 ---SAVOR THIS MOMENT!!! IT'S GONNA BE ***GORGEOUS!!!***
 
-Continue working in your chosen stitch until work measures %f.1 inches. 
+Continue working in your chosen stitch until work measures %.1f inches. 
 (Should be about %i rows, but do whatever feels right!)
 
 Continue in your pattern stitch for %i stitches.
@@ -37,7 +71,7 @@ Again, cast off %i stitches. Don't lose your marker! ;)
 ---It may not look like much, but you just finished the biggest piece of this sweater!  
 ---You **so** got this!!
 """ % (	this_sweater.trs_stitches,
-		this_sweater.raw_trs_length, #still need to figure out decimal display :(
+		this_sweater.raw_trs_length, #huzzah! figured out decimals.
 		this_sweater.trs_rows,
 		this_sweater.trs_half,
 		this_sweater.trs_armhole,
@@ -73,7 +107,7 @@ Start working in the pattern stitch you used to achieve your gauge.
 
 ---This is gonna go soooo much faster than the body! Rock your dance playlist.
 
-Continue working in your chosen stitch until work measures %f.1 inches.
+Continue working in your chosen stitch until work measures %.1f inches.
 (Should be about %i rows, but do whatever feels right!)
 
 Continue in your pattern stitch until you reach the last %i stitches.
@@ -83,7 +117,9 @@ Cast off till the end of the row.
 ---Now you have the body *AND* a sleeve.
 ---Time for chocolate. or zinfandel... or bourbon.
 
-But... we do need 2 sleeves. so repeat it all again, and make sure the lengths match each other exactly."
+But... we do need 2 sleeves. so repeat it all again, 
+and make sure the lengths match each other exactly.
+
 """ % (	this_sweater.slv_stitches,
 		this_sweater.raw_slv_length,
 		this_sweater.slv_rows,
@@ -92,7 +128,7 @@ But... we do need 2 sleeves. so repeat it all again, and make sure the lengths m
 
 # ####NECK
 
-def neck_start():		#no calculations here. tricky just getting everything lined up.
+def assemble_pieces():		#no calculations here. tricky just getting everything lined up.
 
 	return """
 
@@ -100,7 +136,8 @@ def neck_start():		#no calculations here. tricky just getting everything lined u
 ---The good news: you've finished more than half or your knitting! Go you!!
 ---The bad news: now it gets complicated...
 
----The pattern so far has been pretty straightforward and chill, but now you have to start paying attention.
+---The pattern so far has been pretty straightforward and chill, 
+---but now you have to start paying attention.
 
 First, let's assemble all of our pieces into one big sweater-loop.
 
@@ -109,22 +146,29 @@ First, let's assemble all of our pieces into one big sweater-loop.
 
 
 
-You will need 3 markers, all the same color, and 1 in a distinct color to mark the absolute row beginning.
-Knit in your pattern stitch across the front of your torso, up to where you cast off for the first armhole.
+You will need 3 markers, all the same color, plus 1 in a distinct color 
+to mark the absolute row beginning.
+
+Knit in your pattern stitch across the front of your torso, 
+p to where you cast off for the first armhole.
 
 -> Insert the first of your 3 markers.
 
-Now bring your first sleeve, and line up the opening for the armhole, with the opening on the torso.
+Now bring your first sleeve, and line up the opening for the armhole, 
+with the opening on the torso.
+
 Continue to knit across from the torso directly onto the sleeve.
 Knit all the way around the sleeve, and then...
 
 -> Insert the second of your 3 markers.
 
-Now continue to the back of your torso, knit all the way across to where you cast off for the seocnd armhole.
+Now continue to the back of your torso, knit all the way across 
+to where you cast off for the seocnd armhole.
 
 -> Insert the last of your 3 markers.
 
-Bring your second sleeve, line up the armohole openings again, and knit around the armhole to the end.
+Bring your second sleeve, line up the armohole openings again, 
+and knit around the armhole to the end.
 We're back at the begining, now in one continuous loop!
 
 -> Insert your 4th marker - unique color - to mark the row start.
@@ -136,78 +180,96 @@ We're back at the begining, now in one continuous loop!
 ---so hang in there!!
 """
 
-# def neck_finish(this_sweater):  #debug, test!!!!!! draft only
+def neck_start(this_sweater):  #debug, test!!!!!! draft only
+	buffer_st = this_sweater.buffer_stitches() #call method once, shorter name
 
-# 	row_count = 2 	#counter - first row, just working around once.  Second row is our first round of decreases.
-# 	total_sts = this_sweater.total_stitches #just making shorter references
-# 	final_sts = this_sweater.final_stitch_count
-# 	buffer_sts = this_sweater.buffer_stitches
+	return """
 
-# 	print "Now, for the remainder of the work, you will be methodically decreasing stitches, so the body will taper off to a neckline.\n"
-# 	print "You will need to pay attention to stitch and row count going forward.\n"
-# 	print "Starting at the beginning of the row (your unique marker), knit " + buffer_sts + "."
-# 	print "Knit 2 stitches together (decrease by one.)"
-# 	print "Continue knitting until " + (buffer_sts + 2) + " before next marker.\n"
-# 	print "Knit 2 together, knit " + buffer_sts + ", pass the marker, knit " + buffer_sts + ", and knit 2 together."
-# 	print "Continue all the way around the row, decreasing once before, and once after, each marker, until you are back to the start."
-	
+Now, for the remainder of the work, 
+you will be methodically decreasing stitches, 
+so the body will taper off to a neckline.
 
-# 	total_stitches -= 8
+You will need to pay attention to stitch and row count going forward!
 
-# 	print"""
+Starting at the beginning of the row (your unique marker), knit %i stitches.
 
-# 	In plain English, you will be decreasing 8 stitches a row in this manner, every ??? rows,
-# 	but the below chart will help you track exactly how many stitches and rows you should have at every point.
-# 	N.B. this pattern will calculate a basic scoop neckline, but you can easily stop sooner, or continue past
-# 	to create an open/off-the shoulder look, or funnel/turtleneck. Do what feels right!
+Knit 2 stitches together (decreasing by one.)
 
-# 	"""
-# 	print "Row count = " + str(row_count) + ", Stitch count = " + str (total_sts)
+Continue knitting until %i stitches before next marker.
 
-# 	while total_sts > final_sts:
-# 		print "Knit the next ???? rows as presented, without decreases."
-# 		row_count += ???		#only execute decrease every ??? rows (not variable - slope is same no matter size).
-# 		print "At row " + row_count + ", decrease as above - once before, and once after each marker."
-# 		total_sts -= 8		#decreasing once before, once after each of the 4 markers.
-# 		print "Row count = " + str(row_count) + ", Stitch count = " + str(total_sts)
+Knit 2 together, knit %i, pass the marker, knit %i, and knit 2 together.
+Continue all the way around the row, decreasing once before, and once after, 
+each marker, until you are back to the start of the row.
 
-# 	print "Now you should be at row " + str(row_count) + " with " + str(total_sts) + ".\n"
+In plain English, you will be decreasing 8 stitches a row in this manner, 
+every %i rows, but the below chart will help you track exactly how many  
+stitches and rows you should have at every point.
 
-# 	print """
+---N.B. this pattern will calculate a basic scoop neckline, 
+---but you can easily stop sooner to create an open/off-the shoulder look, 
+---or continue past for a snug crew neck,
+---or stop decreasing, but keep knitting for a funnel/turtleneck. 
 
-# Cast off all stitches.
+---Do what feels right!
 
-# Sew closed the small armhole openings under each sleeve.
+	""" % (buffer_st,
+			buffer_st + 2, #um... can I do calculations in here? YEP! :D
+			buffer_st,
+			buffer_st,
+			this_sweater.buffer_rows()
+		)
 
-# Weave any loose ends back into the fabric.
+def raglan_decrease(this_sweater):
 
-# Block, iron, wash - whatever you did before to your swatch to achieve your gauge - 
-# to make sure your sweater ends up the intended size.
+	total_sts = this_sweater.total_stitches #just making shorter references
+	final_sts = this_sweater.final_stitch_count
+	buffer_r = this_sweater.buffer_rows()
+#brand new var - just for counting through loop.
+	row_count = 2 	#already knit 1 while assembling pieces, 2 while first row of decrease.
+	total_sts -= 8 #already dropped 8 stitches in forest row of decrease.
+#new var to hold strings from the upcoming loop
+	raglan_instruction_list = []
 
-# ********************************************
-# ***  YOU JUST MADE A SWEATER!!!!!!!!!!!  ***
-# ********************************************
+	while total_sts > final_sts:
+		raglan_instruction_list.append("Knit the next %i rows as presented, without decreases." % (buffer_r))
+		row_count += buffer_r	#keeping row count in sync with knitting commands	
+		raglan_instruction_list.append("At row %i, decrease as above - once before, and once after each marker." % (row_count))
+		total_sts -= 8			#keeping stitch count in sync with knitting commands
+		row_count += buffer_r	#keeping row count in sync with knitting commands	
+		raglan_instruction_list.append("-> Row count = %i, Stitch count = %i" % (row_count, total_sts))
+		raglan_instruction_list.append("\n\n")
 
-# Do your happy dance!
-# Rock your sweater for the whole world to see, and send pics to: 
+	return raglan_instruction_list
 
-# ninja@knitgit.com
+def finish_sweater():
 
-# 	"""
+	return """
+
+Loosely cast off all stitches.
+
+Sew closed the small armhole openings under each sleeve.
+
+Weave any loose ends back into the fabric.
+
+Block, iron, wash - whatever you did before to your swatch to achieve your gauge - 
+to make sure your sweater ends up the intended size.
+
+********************************************
+***  YOU JUST MADE A SWEATER!!!!!!!!!!!  ***
+********************************************
+
+Do your happy dance!
+
+Rock your sweater for the whole world to see, 
+and send pics to: 
+
+knitgit@gmail.com
+
+	"""
 
 
 
-	# print this_sweater.__dict__
 
-	# torso_start(trs_width, gauge_st, trs_length, gauge_r)
-
-#	variable_name?? = fun_call(parameters)!!!!!!!!! to go from one fun to the next, and carry over new data.
-
-	# sleeve_start(trs_width, gauge_st, slv_length, gauge_r)
-
-	# neck_start()
-
-	# neck_finish(parammmm)
 
 if __name__ == '__main__':
 	main()
