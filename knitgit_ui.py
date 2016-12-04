@@ -100,7 +100,7 @@ def main():
 			SLEEVE_START,
 			ASSEMBLE_PIECES,
 			NECK_START,
-			RAGLAN_DECREASE, #this is itself a list, not a string - argh! tricky to write from :(
+			RAGLAN_DECREASE, #was a list, now string - easier to loop through same types
 			FINISH_SWEATER
 								]
 
