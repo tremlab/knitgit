@@ -132,6 +132,9 @@ def assemble_pieces():		#no calculations here. tricky just getting everything li
 
 	return """
 
+***********************
+*** ASSEMBLE PIECES ***
+***********************
 
 ---The good news: you've finished more than half or your knitting! Go you!!
 ---The bad news: now it gets complicated...
@@ -150,7 +153,7 @@ You will need 3 markers, all the same color, plus 1 in a distinct color
 to mark the absolute row beginning.
 
 Knit in your pattern stitch across the front of your torso, 
-p to where you cast off for the first armhole.
+to where you cast off for the first armhole.
 
 -> Insert the first of your 3 markers.
 
@@ -184,6 +187,10 @@ def neck_start(this_sweater):  #debug, test!!!!!! draft only
 	buffer_st = this_sweater.buffer_stitches() #call method once, shorter name
 
 	return """
+
+***********************
+*** RAGLAN DECREASE ***
+***********************
 
 Now, for the remainder of the work, 
 you will be methodically decreasing stitches, 
@@ -239,11 +246,21 @@ def raglan_decrease(this_sweater):
 		raglan_instruction_list.append("-> Row count = %i, Stitch count = %i" % (row_count, total_sts))
 		raglan_instruction_list.append("\n\n")
 
-	return raglan_instruction_list
+	raglan_instr_string = ""
+
+	for line in raglan_instruction_list:
+		raglan_instr_string = raglan_instr_string + "\n" + line
+
+	return raglan_instr_string		#yikes - orignially returned the list, but that messed up the file output. :()
 
 def finish_sweater():
 
 	return """
+
+***************
+*** FINISH! ***
+***************
+
 
 Loosely cast off all stitches.
 

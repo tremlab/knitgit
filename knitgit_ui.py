@@ -1,5 +1,6 @@
-import knitgit_functions
-from knitgit_classes import Sweater
+import 	knitgit_functions
+from 	knitgit_classes import Sweater
+import 	knitgit_output
 
 
 
@@ -45,6 +46,7 @@ def validate_user_input(input_dict):		#logic works, but research actual values f
 	
 	return input_dict   #hooo boy -- not an else statement! wasn't getting any return. :) 
 
+
 def main():
 
 	print knitgit_functions.print_intro()
@@ -83,15 +85,26 @@ def main():
 	FINISH_SWEATER = knitgit_functions.finish_sweater() #no parameters here, same instructions for all sweaters.
 
 #	this output needs to WRITE to txt or pdf!!!!!!!
-	print TORSO_START
-	print SLEEVE_START
-	print ASSEMBLE_PIECES
-	print NECK_START
+	# print TORSO_START
+	# print SLEEVE_START
+	# print ASSEMBLE_PIECES
+	# print NECK_START
 
-	for line in RAGLAN_DECREASE:
-		print line
+	# for line in RAGLAN_DECREASE:
+	# 	print line
 
-	print FINISH_SWEATER
+	# print FINISH_SWEATER
+
+	instructions_output_list = [
+			TORSO_START,
+			SLEEVE_START,
+			ASSEMBLE_PIECES,
+			NECK_START,
+			RAGLAN_DECREASE, #this is itself a list, not a string - argh! tricky to write from :(
+			FINISH_SWEATER
+								]
+
+	knitgit_output.create_sweater_pattern(instructions_output_list)
 
 if __name__ == '__main__':
 	main()
