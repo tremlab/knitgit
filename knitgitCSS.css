@@ -7,42 +7,44 @@
 	display: none;
 }
 
-#divGauge{
-	height: 100px;
+#accordion{
+/*	height: 100px;*/
 	width: 600px;
-	background-color: blue;
-	color: black;
-	font-size: 20px;
+	background-color: white;
+	color: gray;
+	font-size: 10px;
+	font-family: Arial; 
+	padding: 20px;
 /*	display: none;*/
 }
 
 
-
-#robotLion{
-	display: none;
-}
-
-tr{
-	height: 40px;
-}
-
-
-.containter{
+.container{
 /*	background-color: #222;*/
 	color: #fff;
 	margin: 20px auto;
-	overflow: hidden;
+/*	overflow: hidden;*/
 	padding: 20px;
 	position: relative;
 	width: 600px;
 }
 
 form {
-	display: block;
+	display: inline-block;
 	padding: 15px;
+	margin: 20px auto;
 	color: orange;
-	font-family: Arial;
+	background-color: white;
+	font-family: Arial; 
 	font-weight: bold;
+	width: 300px;
+/*	display: flex; 
+	flex-direction: column;*/
+	float: left;
+}
+
+label {
+	float: right;	
 }
 
 h1 {
@@ -57,6 +59,7 @@ h2 {
 	color: gray;
 	font-family: Arial; 
 	padding: 20px;
+	width: 600px;
 }
 
 h3 {
@@ -64,6 +67,9 @@ h3 {
 	color: orange;
 	font-family: Arial; 
 	padding: 20px;
+	width: 600px;
+	font-size: 11pt;
+	font-weight: normal;
 }
 
 .good {
