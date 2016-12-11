@@ -8,6 +8,12 @@ def create_sweater_pattern(instructions_list): #pass a file name?
 		for section in instructions_list:
 			sweater_txt.write(section)
 
+	####above creates separate text file
+
+	##below return something fro HTML????
+
+	
+
 
 
 

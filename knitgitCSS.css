@@ -1,34 +1,83 @@
-#divRegistered{
-	height: 100px;
-	width: 600px;
-	background-color: blue;
-	color: black;
-	font-size: 20px;
-	display: none;
+
+
+
+.header{
+/*	background-color: #222;*/
+	color: #fff;
+/*	margin: 20px auto;*/
+/*	overflow: hidden;*/
+	padding: 20px;
+	position: relative;
+	width: 50%;
 }
 
-#accordion{
-/*	height: 100px;*/
-	width: 600px;
+img {
+	width: 200px;
+}
+
+h1 {
 	background-color: white;
+	color: orange;
+	font-family: Arial; 
+	padding: 20px;
+	width: 50%;
+}
+
+h2 {
+	background-color: white;
+	color: gray;
+	font-family: Arial; 
+	padding: 20px;
+	width: 50%;
+}
+
+h3 {
+	background-color: gray;
+	color: orange;
+	font-family: Arial; 
+	padding: 20px;
+	width: 50%;
+	font-size: 11pt;
+	font-weight: normal;
+}
+
+
+
+/*Instrucion area - accordion???*/
+#instructions {
+
+}
+
+
+button.accHeader {
+    background-color: #eee;
+    color: gray;
+    cursor: pointer;
+    padding: 18px;
+    width: 50%;
+    text-align: left;
+    border: none;
+    outline: none;
+ 	transition: 0.4s;
+}
+
+div.acc_content {
+    background-color: white;
+/*    display: none;*/
+/*    height: 100px;
+*/	width: 50%;
 	color: gray;
 	font-size: 10px;
 	font-family: Arial; 
 	padding: 20px;
-/*	display: none;*/
+}
+
+div.acc_content.show {
+    display: block;
 }
 
 
-.container{
-/*	background-color: #222;*/
-	color: #fff;
-	margin: 20px auto;
-/*	overflow: hidden;*/
-	padding: 20px;
-	position: relative;
-	width: 600px;
-}
-
+/*form - user inputs arguments*/
 form {
 	display: inline-block;
 	padding: 15px;
@@ -47,31 +96,9 @@ label {
 	float: right;	
 }
 
-h1 {
-	background-color: white;
-	color: orange;
-	font-family: Arial; 
-	padding: 20px;
-}
 
-h2 {
-	background-color: white;
-	color: gray;
-	font-family: Arial; 
-	padding: 20px;
-	width: 600px;
-}
 
-h3 {
-	background-color: gray;
-	color: orange;
-	font-family: Arial; 
-	padding: 20px;
-	width: 600px;
-	font-size: 11pt;
-	font-weight: normal;
-}
-
+/*validate input????*/
 .good {
     	background-color: green;
 	color: white;
@@ -80,4 +107,15 @@ h3 {
 .badboy {
     	background-color: red;
 	color: white;
+}
+
+
+/*for AFTER the form is submitted*/
+#divRegistered {
+	height: 100px;
+	width: 50%;
+	background-color: blue;
+	color: red;
+	font-size: 20px;
+	display: none;
 }

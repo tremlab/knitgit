@@ -15,6 +15,7 @@ document.addEventListener
 		var divReg = document.getElementById("divRegistered"); 
 		var divGauge = document.getElementById("divGauge");
 
+
 		divGauge.addEventListener("focus", fHandleEnter, true); 
 		divGauge.addEventListener("blur", fHandleExit, true);
 
@@ -24,11 +25,32 @@ document.addEventListener
 		var spanElements =  document.querySelectorAll("#frmRegister span");	
 		inputElements[2].addEventListener("blur", function() {fCompareInput(inputElements[1].value, inputElements[2].value, spanElements[2]);});//TEST!!? 
 		inputElements[4].addEventListener("blur", function() {fCompareInput(inputElements[3].value, inputElements[4].value, spanElements[4]);});
+
+
+
+		var divAccHead = document.getElementsByClassName("accHeader");		//trying to figure out accordion. list 
+		divAcc[0].addEventListener("onclick", function() {accodordionFunc(argument,,,);}); ///derp derp -- first header
+		divAcc[1].addEventListener("onclick", function() {accodordionFunc(argument,,,);}); ///derp derp -- 2nd header
+
+
 		
 		var btnReg = document.getElementById("btnRegister");
 		btnReg.addEventListener("click", fRobotLion, true);
 		}
 ); 
+
+function accodordionFunc()
+	{
+	var i;
+
+	for (i = 0; i < divAcc.length; i++) //huh??? I miss python!  D:
+		{
+	    divAcc[i].onclick = function(){
+	        this.classList.toggle("active");
+	        this.nextElementSibling.classList.toggle("show");
+    	}
+    };
+
 
 function fHandleEnter(fcs)
 	{
