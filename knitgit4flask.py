@@ -34,9 +34,24 @@ def main(SWEATER_ATTRIBUTES):	#pass dictionary
 			FINISH_SWEATER
 								]
 
-	knitgit_output.create_sweater_pattern(instructions_output_list)	#creates text file
+	# knitgit_output.create_sweater_pattern(instructions_output_list)	#creates text file
 
-	return instructions_output_list #owrks!!! but needs alot of formatting.
+	# return instructions_output_list #owrks!!! but needs alot of formatting.
+	return THIS_SWEATER
+
+	# need to also return the raglan loop....?
+
+def raglan(SWEATER_ATTRIBUTES):
+
+	THIS_SWEATER = Sweater(int(SWEATER_ATTRIBUTES["raw_gauge_st"]), 	#easier to typacast BEFORE handing over to object.  huzzah!
+						int(SWEATER_ATTRIBUTES["raw_gauge_r"]), 
+						float(SWEATER_ATTRIBUTES["raw_trs_length"]), 
+						float(SWEATER_ATTRIBUTES["raw_trs_width"]), 
+						float(SWEATER_ATTRIBUTES["raw_slv_length"]))	#it works!!!!!!!!  :D
+
+	RAGLAN_DECREASE = knitgit_functions.raglan_decrease(THIS_SWEATER)
+
+	return RAGLAN_DECREASE
 
 if __name__ == '__main__':
 	main()

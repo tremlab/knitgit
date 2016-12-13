@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+	<title>knitgit</title>
+	<link href="../static/knitgitCSS.css" rel="stylesheet"mtype="text/css"/>
+</head>
+
+<body>
+	<h1>knitgit by tremlab</h1>
+		<div id="userInput">
+			<h3>Your input:</h3>
+				<table>
+					<tr>
+						<td>Gauge - stitches:</td>	<td>{{ sweater.raw_gauge_st }}<td>
+					</tr>
+						<td>Gauge - rows:</td> <td>%i</td>
+					<tr>
+						<td>Torso - length:</td> <td>%.2f</td>
+					</tr>
+						<td>Torso - width:</td> <td>%.2f</td>
+					<tr>
+						<td>Sleeve - length:</td> <td>%.2f</td>
+					</tr>
+				</table>
+<!-- 			this_sweater.raw_gauge_st,
+				this_sweater.raw_gauge_r,
+				this_sweater.raw_trs_length,
+				this_sweater.raw_trs_width,
+				this_sweater.raw_slv_length, -->
+		</div>
+
+		<div id="torsoStart">
+			<h1>TORSO START</h1>
+
+				<p>
+				Bottoms up! <br>
+				Let's start building the torso.<br>
+				<br>
+				Using the needles and yarn that you chose to achieve your gauge, cast on %i stitches.
+				</p>
+				<p class= "comment">---REMINDER:  this pattern is in the round!</p>
+
+				<p>Loop around from your last cast on, back to your first.
+				Make sure to use a marker to keep track of where your row starts.
+				Start working in the pattern stitch you used to achieve your gauge.
+				</p>
+				<p class="comment">---SAVOR THIS MOMENT!!! IT'S GONNA BE ***GORGEOUS!!!***</p>
+				<p>
+				Continue working in your chosen stitch until work measures %.1f inches. 
+				(Should be about %i rows, but do whatever feels right!)
+				</p>
+				<p>
+				Continue in your pattern stitch for %i stitches.
+				We're halfway!! Cast off %i stitches.
+				Continue the row in your pattern stitch for %i stitches.
+				Again, cast off %i stitches. Don't lose your marker! ;)
+				</p>
+				<p class="comment">---It may not look like much, but you just finished the biggest piece of this sweater!<br>
+				---You **so** got this!!</p>
+				</p>
+	</div>
+<!--  % (	
+		this_sweater.trs_stitches,
+		this_sweater.raw_trs_length, #huzzah! figured out decimals.
+		this_sweater.trs_rows,
+		this_sweater.trs_half,
+		this_sweater.trs_armhole,
+		this_sweater.trs_half,
+		this_sweater.trs_armhole
+		) -->
+
+</body>
+
+</html>

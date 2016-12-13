@@ -41,6 +41,17 @@ h3 {
 	font-weight: normal;
 }
 
+table {
+	color: orange;
+	font-family: Arial; 
+	padding: 30px;
+}
+
+.comment {
+	font-weight: lighter;
+	color: orange;
+	;
+}
 
 
 /*Instrucion area - accordion???*/
@@ -73,7 +84,7 @@ div.acc_content {
 }
 
 div.acc_content.show {
-    display: block;
+    display: block;  /*for javascrip - accordion???*/
 }
 
 

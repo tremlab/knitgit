@@ -39,6 +39,13 @@ document.addEventListener
 		}
 ); 
 
+// $(".slider").diyslider()  attempting carousel....
+
+// function diyslider():
+// 	{
+	
+// 	}
+
 function accodordionFunc()
 	{
 	var i;
@@ -50,6 +57,7 @@ function accodordionFunc()
 	        this.nextElementSibling.classList.toggle("show");
     	}
     };
+
 
 
 function fHandleEnter(fcs)

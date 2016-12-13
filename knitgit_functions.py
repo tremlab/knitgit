@@ -43,6 +43,16 @@ def torso_start(this_sweater):
 	#is zero?
 
  	return """
+
+Your input:
+
+Gauge - stitches:	%i
+Gauge - rows:		%i
+Torso - length:		%.2f
+Torso - width:		%.2f
+Sleeve - length:	%.2f
+
+
 ******************* 
 *** TORSO START ***
 *******************
@@ -70,7 +80,12 @@ Again, cast off %i stitches. Don't lose your marker! ;)
 
 ---It may not look like much, but you just finished the biggest piece of this sweater!  
 ---You **so** got this!!
-""" % (	this_sweater.trs_stitches,
+""" % (	this_sweater.raw_gauge_st,
+		this_sweater.raw_gauge_r,
+		this_sweater.raw_trs_length,
+		this_sweater.raw_trs_width,
+		this_sweater.raw_slv_length,
+		this_sweater.trs_stitches,
 		this_sweater.raw_trs_length, #huzzah! figured out decimals.
 		this_sweater.trs_rows,
 		this_sweater.trs_half,
@@ -246,12 +261,14 @@ def raglan_decrease(this_sweater):
 		raglan_instruction_list.append("-> Row count = %i, Stitch count = %i" % (row_count, total_sts))
 		raglan_instruction_list.append("\n\n")
 
-	raglan_instr_string = ""
+	return raglan_instruction_list
 
-	for line in raglan_instruction_list:
-		raglan_instr_string = raglan_instr_string + "\n" + line
+	# raglan_instr_string = ""
 
-	return raglan_instr_string		#yikes - orignially returned the list, but that messed up the file output. :()
+	# for line in raglan_instruction_list:
+	# 	raglan_instr_string = raglan_instr_string + "\n" + line
+
+	# return raglan_instr_string		#yikes - orignially returned the list, but that messed up the file output. :()
 
 def finish_sweater():
 
