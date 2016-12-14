@@ -12,30 +12,26 @@
 					<tr>
 						<td>Gauge - stitches:</td>	<td>{{ sweater.raw_gauge_st }}<td>
 					</tr>
-						<td>Gauge - rows:</td> <td>{{ sweater.raw_gauge_r }}</td>
+						<td>Gauge - rows:</td> 		<td>{{ sweater.raw_gauge_r }}</td>
 					<tr>
-						<td>Torso - length:</td> <td>{{ sweater.raw_trs_length }}</td>
+						<td>Torso - length:</td> 	<td>{{ sweater.raw_trs_length }}</td>
 					</tr>
-						<td>Torso - width:</td> <td>{{ sweater.raw_trs_width }}</td>
+						<td>Torso - width:</td> 	<td>{{ sweater.raw_trs_width }}</td>
 					<tr>
-						<td>Sleeve - length:</td> <td>{{ sweater.raw_slv_length }}</td>
+						<td>Sleeve - length:</td> 	<td>{{ sweater.raw_slv_length }}</td>
 					</tr>
 				</table>
-<!-- 			this_sweater.raw_gauge_st,
-				this_sweater.raw_gauge_r,
-				this_sweater.raw_trs_length,
-				this_sweater.raw_trs_width,
-				this_sweater.raw_slv_length, -->
+
 		</div>
 
 		<div id="torsoStart">
 			<h1>TORSO START</h1>
-
+				<img src="../knittinginround.jpg">
 				<p>
 				Bottoms up! <br>
 				Let's start building the torso.<br>
 				<br>
-				Using the needles and yarn that you chose to achieve your gauge, cast on %i stitches.
+				Using the needles and yarn that you chose to achieve your gauge, cast on {{ sweater.trs_stitches}} stitches.
 				</p>
 				<p class= "comment">---REMINDER:  this pattern is in the round!</p>
 
@@ -45,28 +41,200 @@
 				</p>
 				<p class="comment">---SAVOR THIS MOMENT!!! IT'S GONNA BE ***GORGEOUS!!!***</p>
 				<p>
-				Continue working in your chosen stitch until work measures %.1f inches. 
-				(Should be about %i rows, but do whatever feels right!)
+				Continue working in your chosen stitch until work measures {{ sweater.raw_trs_length }} inches. 
+				(Should be about {{ sweater.trs_rows }} rows, but do whatever feels right!)
 				</p>
 				<p>
-				Continue in your pattern stitch for %i stitches.
-				We're halfway!! Cast off %i stitches.
-				Continue the row in your pattern stitch for %i stitches.
-				Again, cast off %i stitches. Don't lose your marker! ;)
+				Continue in your pattern stitch for {{ sweater.trs_half }} stitches.
+				We're halfway!! Cast off {{ sweater.trs_armhole }} stitches.
+				Continue the row in your pattern stitch for {{ sweater.trs_half }} stitches.
+				Again, cast off {{ sweater.trs_armhole }} stitches. Don't lose your marker! ;)
 				</p>
 				<p class="comment">---It may not look like much, but you just finished the biggest piece of this sweater!<br>
 				---You **so** got this!!</p>
+				</p>			
+	</div>
+
+	<div id="sleeveStart">
+		<h1>SLEEVE START</h1>
+				<p class="comment">
+				---But, let's not rest on our laurels just yet. ;)</p>
+				<p>
+				Set aside your (beautiful!) torso work, and lets get started on a sleeve.
+				</p>
+				<p>
+				Using the needles and yarn that you chose to achieve your gauge, cast on {{ sweater.slv_stitches }} stitches.
+				</p>
+				<img src="knittinginround-double.jpg">
+				<p class-"comment">
+				---REMINDER: we're STILL working in the round. <br>
+				---This is where you'll need a ninja star of double-pointed needles to work.<br>
+				---(REMINDER: you're totally a ninja!!)</p>
+				<img src="ninja.jpg">
+				<p>
+				Loop around from your last cast on, back to your first.
+				</p>
+				<p>
+				Make sure to use a marker to keep track of where your row starts.
+				</p>
+				Start working in the pattern stitch you used to achieve your gauge.
+				<p class="comment">
+				---This is gonna go soooo much faster than the body! Rock your dance playlist.
+				</p>
+				<p>
+				Continue working in your chosen stitch until work measures {{ sweater.raw_slv_length}} inches.<br>
+				(Should be about {{sweater.slv_rows }} rows, but do whatever feels right!)
+				</p>
+				<p>
+				Continue in your pattern stitch until you reach the last {{ sweater.trs_armhole }} stitches.
+				</p>
+				<p>
+				Cast off till the end of the row.
+				</p>
+				<p class="comment">
+				---Now you have the body *AND* a sleeve.
+				---Time for chocolate. or zinfandel... or bourbon.
+				</p>
+				<img src="borbon.jpg">
+				<p>
+				But... we do need 2 sleeves. so repeat it all again, 
+				and make sure the lengths match each other exactly.
 				</p>
 	</div>
-<!--  % (	
-		this_sweater.trs_stitches,
-		this_sweater.raw_trs_length, #huzzah! figured out decimals.
-		this_sweater.trs_rows,
-		this_sweater.trs_half,
-		this_sweater.trs_armhole,
-		this_sweater.trs_half,
-		this_sweater.trs_armhole
-		) -->
+	<div id="assemblePieces">
+		<h1>ASSMEBLE PIECES</h1>
+				<p class="comment">
+				---The good news: you've finished more than half or your knitting! Go you!!<br>
+				---The bad news: now it gets complicated...
+				</p>
+				<p class="comment">
+				---The pattern so far has been pretty straightforward and chill,<br>
+				---but now you have to start paying attention.
+				</p>
+				<p>
+				First, let's assemble all of our pieces into one big sweater-loop.
+				<p>
+				<p class="comment">
+				---(REMINDER: you are Voltron!)
+				<img src="voltron.jpg">
+				</p>
+				<p>
+				You will need 3 markers, all the same color, plus 1 in a distinct color 
+				to mark the absolute row beginning.
+				</p>
+				<p>
+				Knit in your pattern stitch across the front of your torso, 
+				to where you cast off for the first armhole.
+				</p>
+				<p>
+				-> Insert the first of your 3 markers.
+				</p>
+				<p>
+				Now bring your first sleeve, and line up the opening for the armhole, 
+				with the opening on the torso.
+				<img src="assemble.jpg">
+				</p>
+				<p>
+				Continue to knit across from the torso directly onto the sleeve.
+				Knit all the way around the sleeve, and then...
+				</p>
+				<p>
+				-> Insert the second of your 3 markers.
+				</p>
+				<p>
+				Now continue to the back of your torso, knit all the way across 
+				to where you cast off for the seocnd armhole.
+				</p>
+				<p>
+				-> Insert the last of your 3 markers.
+				</p>
+				<p>
+				Bring your second sleeve, line up the armohole openings again, 
+				and knit around the armhole to the end.
+				We're back at the begining, now in one continuous loop!
+				</p>
+				<p>
+				-> Insert your 4th marker - unique color - to mark the row start.
+				</p>
+				<p class="comment">
+				---Knitting this first row was probably very awkward,<br>
+				---with your needles forced to turn around some pretty sharp curves.<br>
+				---The next few rows will continue to be awkward,<br>
+				---but with each row it will level out into an easier round shape,<br>
+				---so hang in there!!
+				</p>
+	</div>
+	<div id="neckStart">
+		<h1>NECK START</h1>
+				<p>
+				Now, for the remainder of the work, <br>
+				you will be methodically decreasing stitches, <br>
+				so the body will taper off to a neckline.<br>
+			</p>
+				<p>
+				You will need to pay attention to stitch and row count going forward!
+			</p>
+				<p>
+				Starting at the beginning of the row (your unique marker), knit {{ sweater.trs_half }} stitches.
+			</P>
+				<p>
+				Knit 2 stitches together (decreasing by one.)
+			</p>
+				<p>
+				Continue knitting until {{ sweater.buffer_stitches() }} stitches before next marker.
+			</p>
+				<p>
+				Knit 2 together, knit {{ sweater.buffer_stitches() }}, pass the marker, knit {{ sweater.buffer_stitches() }}, and knit 2 together.<br>
+				Continue all the way around the row, decreasing once before, and once after,<br> 
+				each marker, until you are back to the start of the row.<br>
+			</p>
+				<p>
+				In plain English, you will be decreasing 8 stitches a row in this manner, 
+				every %i rows, but the below chart will help you track exactly how many  
+				stitches and rows you should have at every point.
+			</P>
+				<p class="comment">
+				---N.B. this pattern will calculate a basic scoop neckline, <br>
+				---but you can easily stop sooner to create an open/off-the shoulder look, <br>
+				---or continue past for a snug crew neck,<br>
+				---or stop decreasing, but keep knitting for a funnel/turtleneck. <br><br>
+
+				---Do what feels right!
+				<img src="neckline.jpg"><img src="funnel.jpg">
+			</p>
+	</div>
+	<div id="raglan">
+		<h1>RAGLAN DECREASE</h1>
+		<img src="raglan.jpg">
+			<ul> {% for line in raglan %}
+				<li>{{ line }}</li>
+				{% endfor %}
+			</ul>
+	</div>
+	<div id="finish">
+		<h1>FINISH</h1>
+			<p>
+			Loosely cast off all stitches.
+		</p>
+			<p>
+			Sew closed the small armhole openings under each sleeve.
+		</p>
+			<p>
+			Weave any loose ends back into the fabric.
+		</p>
+			<p>
+			Block, iron, wash - whatever you did before to your swatch to achieve your gauge - 
+			to make sure your sweater ends up the intended size.
+		</p>
+			<h1>YOU JUST MADE A SWEATER!!!!!!!!!!!</h1>
+			<p>
+			Do your happy dance!
+		</p>
+			<p>
+			Rock your sweater for the whole world to see, <br>
+			and send pics to: 
+
+			<h3>knitgit@gmail.com</h3>
 
 </body>
 

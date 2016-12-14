@@ -20,7 +20,7 @@ def main(SWEATER_ATTRIBUTES):	#pass dictionary
 
 	NECK_START = knitgit_functions.neck_start(THIS_SWEATER)
 
-	RAGLAN_DECREASE = knitgit_functions.raglan_decrease(THIS_SWEATER)
+	RAGLAN_DECREASE = knitgit_functions.raglan_decrease(THIS_SWEATER) #list?
 
 	FINISH_SWEATER = knitgit_functions.finish_sweater() #no parameters here, same instructions for all sweaters.
 
