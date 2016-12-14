@@ -26,7 +26,7 @@
 
 		<div id="torsoStart">
 			<h1>TORSO START</h1>
-				<img src="../knittinginround.jpg">
+				<img src="../static/jpegs/knittinginround.jpg">
 				<p>
 				Bottoms up! <br>
 				Let's start building the torso.<br>
@@ -65,12 +65,12 @@
 				<p>
 				Using the needles and yarn that you chose to achieve your gauge, cast on {{ sweater.slv_stitches }} stitches.
 				</p>
-				<img src="knittinginround-double.jpg">
-				<p class-"comment">
+				<img src="../static/jpegs/knittinginround-double.jpg">
+				<p class="comment">
 				---REMINDER: we're STILL working in the round. <br>
 				---This is where you'll need a ninja star of double-pointed needles to work.<br>
 				---(REMINDER: you're totally a ninja!!)</p>
-				<img src="ninja.jpg">
+				<img src="../static/jpegs/ninja.jpg">
 				<p>
 				Loop around from your last cast on, back to your first.
 				</p>
@@ -95,14 +95,14 @@
 				---Now you have the body *AND* a sleeve.
 				---Time for chocolate. or zinfandel... or bourbon.
 				</p>
-				<img src="borbon.jpg">
+				<img src="../static/jpegs/bourbon.jpg">
 				<p>
 				But... we do need 2 sleeves. so repeat it all again, 
 				and make sure the lengths match each other exactly.
 				</p>
 	</div>
 	<div id="assemblePieces">
-		<h1>ASSMEBLE PIECES</h1>
+		<h1>ASSEMBLE PIECES</h1>
 				<p class="comment">
 				---The good news: you've finished more than half or your knitting! Go you!!<br>
 				---The bad news: now it gets complicated...
@@ -115,8 +115,8 @@
 				First, let's assemble all of our pieces into one big sweater-loop.
 				<p>
 				<p class="comment">
-				---(REMINDER: you are Voltron!)
-				<img src="voltron.jpg">
+				---(REMINDER: you are Voltron!)<br>
+				<img src="../static/jpegs/voltron.jpg">
 				</p>
 				<p>
 				You will need 3 markers, all the same color, plus 1 in a distinct color 
@@ -131,8 +131,8 @@
 				</p>
 				<p>
 				Now bring your first sleeve, and line up the opening for the armhole, 
-				with the opening on the torso.
-				<img src="assemble.jpg">
+				with the opening on the torso.<br>
+				<img src="../static/jpegs/assemble.jpg">
 				</p>
 				<p>
 				Continue to knit across from the torso directly onto the sleeve.
@@ -190,7 +190,7 @@
 			</p>
 				<p>
 				In plain English, you will be decreasing 8 stitches a row in this manner, 
-				every %i rows, but the below chart will help you track exactly how many  
+				every {{ sweater.buffer_rows() }} rows, but the below chart will help you track exactly how many  
 				stitches and rows you should have at every point.
 			</P>
 				<p class="comment">
@@ -198,14 +198,13 @@
 				---but you can easily stop sooner to create an open/off-the shoulder look, <br>
 				---or continue past for a snug crew neck,<br>
 				---or stop decreasing, but keep knitting for a funnel/turtleneck. <br><br>
-
-				---Do what feels right!
-				<img src="neckline.jpg"><img src="funnel.jpg">
+				---Do what feels right!<br>
+				<img src="../static/jpegs/neckline.jpg"><img src="../static/jpegs/funnel.jpg">
 			</p>
 	</div>
 	<div id="raglan">
 		<h1>RAGLAN DECREASE</h1>
-		<img src="raglan.jpg">
+		<img src="../static/jpegs/raglan.jpg">
 			<ul> {% for line in raglan %}
 				<li>{{ line }}</li>
 				{% endfor %}
