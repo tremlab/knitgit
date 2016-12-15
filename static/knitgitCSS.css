@@ -1,4 +1,7 @@
-
+/*
+github: tremlab
+Hackbright Intro 2016
+*/
 
 
 .header{
@@ -14,6 +17,7 @@
 img {
 	width: 200px;
 }
+
 
 h1 {
 	background-color: white;
@@ -49,6 +53,7 @@ table {
 	font-family: Arial; 
 	padding: 30px;
 }
+
 
 .comment {
 	font-weight: lighter;

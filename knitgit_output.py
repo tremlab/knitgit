@@ -1,4 +1,4 @@
-
+#previously- creates output to external text file.
 
 
 def create_sweater_pattern(instructions_list): #pass a file name?

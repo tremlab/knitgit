@@ -1,7 +1,73 @@
-#code actual!!!!
+#previously - for command line interaction
 
 #github: tremlab
 #Hackbright Intro 2016
+
+def raglan_decrease(this_sweater):  #for flask, this is the only fucniton I'm referemcing now.  Refactor!!!
+
+	total_sts = this_sweater.total_stitches #just making shorter references
+	final_sts = this_sweater.final_stitch_count
+
+	buffer_r = this_sweater.buffer_rows()   #brand new var - just for counting through loop.
+	row_count = 2 	#already knit 1 while assembling pieces, 2 while first row of decrease.
+	total_sts -= 8 #new var to hold strings from the upcoming loop    #already dropped 8 stitches in forest row of decrease.
+
+	raglan_instruction_list = []
+
+	while total_sts > final_sts:
+		raglan_instruction_list.append("Knit the next %i rows as presented, without decreases." % (buffer_r))		#adds strin gof text instruction in to the list
+		row_count += buffer_r	#keeping row count in sync with knitting commands	
+		raglan_instruction_list.append("At row %i, decrease as above - once before, and once after each marker." % (row_count))
+		total_sts -= 8			#keeping stitch count in sync with knitting commands
+		row_count += 1			#keeping row count in sync with knitting commands	
+		raglan_instruction_list.append("-> Row count = %i, Stitch count = %i" % (row_count, total_sts))		
+		raglan_instruction_list.append("\n\n")
+
+	return raglan_instruction_list
+
+
+
+
+
+
+#used when all this output to a simple text file - convert whoel lsit to one big string.
+
+
+
+	# raglan_instr_string = ""
+
+	# for line in raglan_instruction_list:
+	# 	raglan_instr_string = raglan_instr_string + "\n" + line
+
+	# return raglan_instr_string		#yikes - orignially returned the list, but that messed up the file output. :()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def print_intro():
 	return """
@@ -241,34 +307,7 @@ stitches and rows you should have at every point.
 			this_sweater.buffer_rows()
 		)
 
-def raglan_decrease(this_sweater):
 
-	total_sts = this_sweater.total_stitches #just making shorter references
-	final_sts = this_sweater.final_stitch_count
-	buffer_r = this_sweater.buffer_rows()
-#brand new var - just for counting through loop.
-	row_count = 2 	#already knit 1 while assembling pieces, 2 while first row of decrease.
-	total_sts -= 8 #already dropped 8 stitches in forest row of decrease.
-#new var to hold strings from the upcoming loop
-	raglan_instruction_list = []
-
-	while total_sts > final_sts:
-		raglan_instruction_list.append("Knit the next %i rows as presented, without decreases." % (buffer_r))
-		row_count += buffer_r	#keeping row count in sync with knitting commands	
-		raglan_instruction_list.append("At row %i, decrease as above - once before, and once after each marker." % (row_count))
-		total_sts -= 8			#keeping stitch count in sync with knitting commands
-		row_count += buffer_r	#keeping row count in sync with knitting commands	
-		raglan_instruction_list.append("-> Row count = %i, Stitch count = %i" % (row_count, total_sts))
-		raglan_instruction_list.append("\n\n")
-
-	return raglan_instruction_list
-
-	# raglan_instr_string = ""
-
-	# for line in raglan_instruction_list:
-	# 	raglan_instr_string = raglan_instr_string + "\n" + line
-
-	# return raglan_instr_string		#yikes - orignially returned the list, but that messed up the file output. :()
 
 def finish_sweater():
 
